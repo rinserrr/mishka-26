@@ -1,0 +1,177 @@
+.card {
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 334px 335px;
+    min-height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card__content {
+  padding: 27px;
+  padding-bottom: 24px;
+  width: 260px;
+  border: 1px solid $color-whisper;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 28px;
+    bottom: 72px;
+    left: 28px;
+    width: auto;
+    height: 1px;
+    background-color: $color-whisper;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 rgba($color-default-black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba($color-default-black, 10%);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 39px 24px 33px;
+    width: 335px;
+
+    &::after {
+      right: 33px;
+      bottom: 72px;
+      left: 34px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 29px 26px 24px 27px;
+    width: 100%;
+
+    &::after {
+      right: 33px;
+      left: 27px;
+    }
+  }
+}
+
+.card__content-wrapper {
+  margin-bottom: 43px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.card__image {
+  display: block;
+  width: 260px;
+  height: 195px;
+
+  @media (min-width: $tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card__title-link {
+  text-decoration: none;
+}
+
+.card__title {
+  margin: 0 0 5px 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-default-black;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+    font-size: 20px;
+    max-width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.card__text {
+  margin: 0;
+  font-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
+}
+
+.card__buy {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  color: $color-default-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.card__button {
+  position: relative;
+  line-height: 0;
+}
+
+.card__button-image {
+  color: $color-default-black;
+  opacity: 20%;
+
+  &:hover {
+    color: $color-downy;
+    opacity: 100%;
+  }
+
+  &:active {
+    color: $color-downy;
+    opacity: 30%;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 5px;
+  }
+}

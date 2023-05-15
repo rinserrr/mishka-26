@@ -1,0 +1,206 @@
+.reviews {
+  padding-top: 31px;
+  padding-bottom: 51px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    background-color: $color-default-white;
+    background-image: url("../img/background/reviews-tablet.jpg");
+    background-repeat: no-repeat;
+    padding-top: 83px;
+    padding-bottom: 103px;
+    position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/reviews-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 350px 457px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1052px;
+    padding: 78px 64px 157px 176px;
+    position: relative;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/pattern/pattern-wave-s.png");
+    background-repeat: repeat-x;
+    bottom: 0;
+    left: -8px;
+    width: 110%;
+    height: 6px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      background-image: url("../img/pattern/pattern-wave-m.png");
+      background-repeat: repeat-x;
+      bottom: 0;
+      left: -22px;
+      width: 110%;
+      height: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      content: "";
+      background-image: url("../img/pattern/pattern-wave-l.png");
+      background-repeat: repeat-x;
+      max-width: 1050px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 25px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .reviews__title {
+    margin-bottom: 14px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .reviews__list {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .reviews__item {
+    &--slide-2 {
+      display: none;
+    }
+
+    &--slide-3 {
+      display: none;
+    }
+  }
+
+  .reviews__text {
+    margin: 0 0 29px 0;
+    font-size: 15px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+      font-size: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 41px;
+    }
+  }
+
+  .reviews__author {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-default-black;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      max-width: 450px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      max-width: 650px;
+    }
+  }
+
+  .reviews__link {
+    font-weight: 400;
+    line-height: 30px;
+    color: $color-charcoal;
+    text-decoration: none;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+    }
+  }
+
+  .reviews__switch {
+    display: flex;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      right: 69px;
+      bottom: 134px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 20px;
+      bottom: 190px;
+    }
+  }
+
+  .reviews__switch-button {
+    width: 130px;
+    height: 52px;
+    padding: 13px 42px 13px 38px;
+    border: 1px solid $color-whisper;
+    background-color: $color-default-white;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-right: -16px;
+      width: 50px;
+      border: none;
+    }
+
+    &--prew {
+      background-image: url("../img/control/huge-arrow-left.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      border-right-width: 0.5px;
+    }
+
+    &--next {
+      background-image: url("../img/control/huge-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      border-left-width: 0.5px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .reviews__button {
+    margin-top: 38px;
+    font-size: 18px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+      width: 175px;
+      position: absolute;
+      top: 79px;
+      right: 50px;
+      font-size: 17px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 1px;
+    }
+  }
+}
